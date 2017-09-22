@@ -11,8 +11,6 @@ repositories {
     jcenter()
 }
 
-mainClassName = "com.perqin.lintcode.LintCode"
-
 sourceSets {
     main {
         java {
