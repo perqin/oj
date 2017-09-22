@@ -1,7 +1,9 @@
-public class Solution {
+package com.perqin.lintcode.insertionsortlist;
+
+class Solution {
     /**
      * @param head: The first node of linked list.
-     * @return: The head of linked list.
+     * @return The head of linked list.
      */
     public ListNode insertionSortList(ListNode head) {
         if (head == null) {

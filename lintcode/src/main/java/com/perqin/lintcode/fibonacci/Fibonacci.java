@@ -1,3 +1,5 @@
+package com.perqin.lintcode.fibonacci;
+
 import java.util.Scanner;
 
 
