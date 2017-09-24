@@ -1,6 +1,6 @@
 package com.perqin.lintcode.kthlargestelement;
 
-class Solution {
+public class Solution {
     /**
      * @param k : description of k
      * @param nums : array of nums
@@ -11,9 +11,6 @@ class Solution {
     }
 
     private int kthLargestElement(int k, int[] nums, int left, int right) {
-        System.out.println("Search in [" + left + " - " + right + "] for the " + k + "-th largest number");
-        for (int i = left; i <= right; ++i) System.out.print(nums[i] + ",");
-        System.out.println();
         int tmp;
         if (left == right) {
             return nums[left];
@@ -37,7 +34,6 @@ class Solution {
                 --r;
             }
         }
-        System.out.println("l = " + l + ", r = " + r + ", left = " + left + ", right = " + right);
         if (r >= left && k - 1 <= r) {
             return kthLargestElement(k, nums, left, r);
         } else {

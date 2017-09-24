@@ -1,11 +1,11 @@
 package com.perqin.lintcode.matrixzigzagtraversal;
 
-class Solution {
+public class Solution {
     /**
      * @param matrix: a matrix of integers
-     * @return: an array of integers
+     * @return an array of integers
      */
-    public int[] printZMatrix(int[][] matrix) {
+    int[] printZMatrix(int[][] matrix) {
         final int row = matrix.length;
         final int col = matrix[0].length;
         int[] result = new int[row * col];

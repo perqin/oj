@@ -1,11 +1,13 @@
-class Solution {
+package com.perqin.lintcode.fastpower;
+
+public class Solution {
     private static final int MAX_CACHE_SIZE = 1000000;
-    private int[] cache = new int[MAX_CACHE_SIZE];
-    /*
+    private final int[] cache = new int[MAX_CACHE_SIZE];
+    /**
      * @param a, b, n: 32bit integers
-     * @return: An integer
+     * @return An integer
      */
-    public int fastPower(int a, int b, int n) {
+    int fastPower(int a, int b, int n) {
         for (int i = 0; i <= n; ++i) {
             if (i >= MAX_CACHE_SIZE) break;
             cache[i] = -1;
@@ -22,12 +24,7 @@ class Solution {
             return cache[n];
         } else {
             int x = fastPower(a, b, n /  2);
-            int y;
-            if (n % 2 == 0) {
-                y = x;
-            } else {
-                y = fastPower(a, b, n - n / 2);
-            }
+            int y = n % 2 == 0 ? x : fastPower(a, b, n - n / 2);
             int result = (int) (((long) x * (long) y) % b);
             if (n < MAX_CACHE_SIZE) {
                 cache[n] = result;
@@ -35,4 +32,4 @@ class Solution {
             return result;
         }
     }
-};
+}

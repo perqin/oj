@@ -1,11 +1,11 @@
 package com.perqin.lintcode.findminimuminrotatedsortedarray;
 
 public class Solution {
-  /*
+  /**
    * @param nums: a rotated sorted array
-   * @return: the minimum number in the array
+   * @return the minimum number in the array
    */
-  public int findMin(int[] nums) {
+  int findMin(int[] nums) {
       return findMin(nums, 0, nums.length - 1);
   }
 

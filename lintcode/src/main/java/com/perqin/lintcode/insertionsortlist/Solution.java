@@ -1,13 +1,13 @@
 package com.perqin.lintcode.insertionsortlist;
 
-class Solution {
+public class Solution {
     /**
      * @param head: The first node of linked list.
      * @return The head of linked list.
      */
-    public ListNode insertionSortList(ListNode head) {
+    ListNode insertionSortList(ListNode head) {
         if (head == null) {
-            return head;
+            return null;
         }
         ListNode prePicked = head;
         ListNode picked = head.next;
